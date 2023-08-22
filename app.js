@@ -5,12 +5,14 @@ const app = express();
 // To take input from the Url Request 
 app.use(express.json());
 
+// To get the mutiple parameters
+
 // calling the Contacy details route 
 app.use('/' , contactdetailsRoutes);
 
 // Last Middle Ware (404)
 app.use((req , res , next ) =>{
-    res.json({message : 'Invalid URL '})
+    res.json({message : '404 not found '})
 })
 
 // startup the server 

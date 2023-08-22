@@ -10,10 +10,13 @@ contactdetailsRoutes.post('/addcontact'  , contactcontroller.addcontact);
 
 
 // 2. read 
-contactdetailsRoutes.get('/getcontact/:name' , contactcontroller.readcontact);
+contactdetailsRoutes.get('/getcontact' , contactcontroller.readcontact);
 
-//3. update 
-contactdetailsRoutes.put('/updatecontact/:name' , contactcontroller.updatecontact);
+// 3. read 
+contactdetailsRoutes.get('/getallcontact' , contactcontroller.readallcontacts);
 
-//4. delete 
-contactdetailsRoutes.delete('/removeContact/:name' , contactcontroller.removecontact);
+//4. update 
+contactdetailsRoutes.put('/updatecontact/:contactid' , contactcontroller.updatecontact)
+
+//5. delete 
+contactdetailsRoutes.delete('/removeContact/:contactid' , contactcontroller.removecontact)
